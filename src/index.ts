@@ -1,14 +1,6 @@
-function greet(nome : string){
-    return `Olá ${nome}`;
-}
+let firstName = 'Georgia';
+firstName = 'Caroline';
 
-console.log(greet('Mario Soares'));
+//firstName = 15;
 
-export default greet;
-
-console.log('Olá');
-
-//const nomeado = 'Luiz';
-
-const nome = 'Matheus';
-console.log('Bem vindo ' + nome);
+console.log(firstName);
