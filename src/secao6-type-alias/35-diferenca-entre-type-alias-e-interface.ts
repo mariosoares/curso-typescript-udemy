@@ -23,9 +23,10 @@ interface getCategorias {
 
 // <<<<<<<<<<   Diferenças   >>>>>>>>>>
 
-//interface userID extends string | number {} //errp
-
+//interface userID extends string | number {} //erro
+// com interfaces não conseguimos unir ou declarar tipos primitivos
 // Tuplas nao vao ser tipadas
+
 interface Tupla{
   0: number;
   1: number;
@@ -78,9 +79,11 @@ type getCategorias2 = (id: string) => void;
 // Podemos declarar tipo primitivo
 type userID2 = string | number;
 
-// Tuplas com tipadas com TYPE
+// Tuplas tipadas com TYPE
+
 type Tupla2 = [number, number]
 
+//[1, 2, 15 ] as Tupla; //erro
 [1, 2] as Tupla2;
 
 
