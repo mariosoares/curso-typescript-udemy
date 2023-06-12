@@ -19,12 +19,14 @@ class Loja {
         this.categoria = categoria;
     }
 
+    // os métodos são declarados desta maneira:
     criarLoja(): void {
         console.log(`Loja ${this.nome}, categoria: ${this.categoria}`);
     }
 
-    emitirPedido(mesa: number, ...pedidos: string[]): string {
+    emitirPedido(mesa: number, ...pedidos: string[]): string { //pedidos --> array de strings
 
+        // pedidos é uma array, tem o método map
         pedidos.map((pedido) => {
             console.log(`Saindo novo pedido: ${pedido}`);
         })
@@ -46,12 +48,14 @@ class Loja {
 
 const redBurguer = new Loja("Red Burguer", "lanches");
 
-//  console.log(redBurguer.nome)
+ console.log(redBurguer.nome);
 
-// redBurguer.criarLoja()
+redBurguer.criarLoja(); console.log();
 
-// const retornoLoja = redBurguer.emitirPedido(48, "Suco Gelado", "Hamburguer duplo", "Coca 2L")
-// console.log(retornoLoja);
+const retornoPedido = redBurguer.emitirPedido(48, "Suco Gelado", "Hamburguer duplo", "Coca 2L"); console.log();
+
+console.log(retornoPedido); console.log();
 
 redBurguer.mudarStatus("FECHADO")
+
 
